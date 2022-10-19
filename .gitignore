@@ -1,0 +1,6 @@
+.vs
+x64
+Debug
+Release
+rust base.pdb
+rust base.dll

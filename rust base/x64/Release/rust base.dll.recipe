@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\anton\Desktop\pro pasters\x64\Release\rust base.dll</FullPath>
+      <FullPath>C:\Users\anton\Desktop\pro pasters\rust-base\x64\Release\rust base.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

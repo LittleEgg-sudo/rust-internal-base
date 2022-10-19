@@ -12,6 +12,18 @@ bool reset_capsule = false;
 
 namespace hooks
 {
+	bool left;
+	bool right;
+
+	std::vector<std::string> combo = { "one", "two" };
+	int comboLeftSelected;
+	int comboRightSelected;
+
+	float sliderFloatLeft;
+	float sliderFloatRight;
+
+	int sliderIntLeft;
+	int sliderIntRight;
 
 	namespace ddraw
 	{
@@ -31,6 +43,27 @@ namespace hooks
 			mid_framework::add_tab("test three", 2, 3);
 			mid_framework::add_tab("test four", 3, 4);
 			mid_framework::add_tab("test five", 4, 5);
+
+			//checkmarks
+			mid_framework::add_checkbox("checkbox on leftside", &left, 1);
+			mid_framework::add_checkbox("checkbox on rightside", &right, 2);
+
+			//labels
+			mid_framework::add_label("label on leftside", 1);
+			mid_framework::add_label("label on rightside", 2);
+
+			//combo boxes
+			mid_framework::add_combo(combo, &comboLeftSelected, 1);
+			mid_framework::add_combo(combo, &comboRightSelected, 2);
+
+			//slider float
+			mid_framework::add_slider_float("slider float on leftside", &sliderFloatLeft, 1, 100, 1);
+			mid_framework::add_slider_float("slider float on rightside", &sliderFloatRight, 1, 100, 2);
+
+			//slider int
+			mid_framework::add_slider_int("slider int on leftside", &sliderIntLeft, 1, 100, 1);
+			mid_framework::add_slider_int("slider int on rightside", &sliderIntRight, 1, 100, 2);
+
 			mid_framework::add_child(2);
 			mid_framework::end();
 				
