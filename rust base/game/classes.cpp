@@ -45,24 +45,19 @@ namespace variables
 	int					screen_height = 1080;
 	int					image_width = 0;
 	int					image_height = 0;
-	//ID3D11ShaderResourceView* resource_view = nullptr;
-	//ImDrawList*			draw_list = nullptr;
-	//ImFont* smallestpixel7 = nullptr;
-	//std::vector<player_data> player_data = std::vector<player_data>();
-	//std::vector<explosion_data> explosion_data = std::vector<explosion_data>();
 	Vector2				mouse_position = Vector2();
 	Vector2				mouse_position_backup = Vector2();
 	bool				loaded = true;
 	uintptr_t			draw_label = NULL;
 	uintptr_t			white_texture = NULL;
 	uintptr_t			camera_list = NULL;
-	uintptr_t			client_entities = NULL; //il2cpp::value(xorstr_("BaseNetworkable"), xorstr_("clientEntities"), false);
+	uintptr_t			client_entities = NULL; 
 	uintptr_t			debug_camera_address = NULL;
+	std::vector<rust::BasePlayer*> player_list;
 	float				fly_hack_vert = 0.f;
 	float				fly_hack_vert_max = 0.f;
 	float				fly_hack_hori = 0.f;
 	float				fly_hack_hori_max = 0.f;
-	//chaiscript::ChaiScript chai = chaiscript::ChaiScript();
 }
 
 namespace funcs1

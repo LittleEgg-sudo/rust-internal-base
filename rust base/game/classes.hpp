@@ -821,6 +821,73 @@ namespace rust
 		float				get_radius();
 		float				get_height(bool ducked);
 		float				get_jumpheight();
+		uintptr_t			object;
+	};
+
+	inline std::array<int, 20> valid_bones = {
+		1, 2, 3, 5, 6, 14, 15, 17, 18, 21, 23, 24, 25, 26, 27, 48, 55, 56, 57, 76
+	};
+	inline struct box_bounds {
+		float left, right, top, bottom;
+		bool onscreen = false;
+
+		bool empty() {
+			if (this->left == 0 && this->right == 0 && this->top == 0 && this->bottom == 0)
+				return true;
+
+			if (this->left == FLT_MAX || this->right == FLT_MIN || this->top == FLT_MAX || this->bottom == FLT_MIN)
+				return true;
+
+			return false;
+		}
+		static box_bounds null() {
+			return { 0, 0, 0, 0 };
+		}
+	};
+
+	inline box_bounds get_bounds(rust::BasePlayer* player, float expand = 0) {
+		box_bounds ret = { FLT_MAX, FLT_MIN, FLT_MAX, FLT_MIN };
+
+		for (auto j : valid_bones) {
+			auto transform = player->get_bone_transform(j);
+			if (transform) {
+				Vector2 sc;
+				auto world_pos = transform->get_position();
+
+				if (j == 48)
+					world_pos.y += 0.2f;
+
+				if (functions::WorldToScreen(world_pos, sc)) {
+					Vector2 bone_screen = sc;
+
+					if (bone_screen.x < ret.left)
+						ret.left = bone_screen.x;
+					if (bone_screen.x > ret.right)
+						ret.right = bone_screen.x;
+					if (bone_screen.y < ret.top)
+						ret.top = bone_screen.y;
+					if (bone_screen.y > ret.bottom)
+						ret.bottom = bone_screen.y;
+					ret.onscreen = true;
+				}
+			}
+		}
+
+		if (ret.left == FLT_MAX)
+			return box_bounds::null();
+		if (ret.right == FLT_MIN)
+			return box_bounds::null();
+		if (ret.top == FLT_MAX)
+			return box_bounds::null();
+		if (ret.bottom == FLT_MIN)
+			return box_bounds::null();
+
+		ret.left -= expand;
+		ret.right += expand;
+		ret.top -= expand;
+		ret.bottom += expand;
+
+		return ret;
 	};
 
 	class LocalPlayer : BasePlayer {
@@ -1041,6 +1108,7 @@ namespace variables
 	extern uintptr_t			camera_list;
 	extern uintptr_t			client_entities;
 	extern uintptr_t			debug_camera_address;
+	extern std::vector<rust::BasePlayer*> player_list;
 	extern float				fly_hack_vert;
 	extern float				fly_hack_vert_max;
 	extern float				fly_hack_hori;

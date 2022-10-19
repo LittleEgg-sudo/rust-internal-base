@@ -31,6 +31,15 @@
     <Filter Include="Source Files\game">
       <UniqueIdentifier>{863337e4-8c56-40db-9871-7a732b3a20e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\hooks">
+      <UniqueIdentifier>{7a6fdb0d-b06e-4e39-aa73-54d2502186ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\hooks\ongui">
+      <UniqueIdentifier>{b543191b-9993-4a82-a126-4054c5afe2c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\hooks\baseplayer">
+      <UniqueIdentifier>{e2df53a4-6369-4c26-8e4d-4b410ca6611e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -50,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="game\classes.cpp">
       <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="esp.cpp">
+      <Filter>Source Files\features</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +97,18 @@
     </ClInclude>
     <ClInclude Include="gui_framework.h">
       <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="hinclude.h">
+      <Filter>Header Files\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="ongui.h">
+      <Filter>Header Files\hooks\ongui</Filter>
+    </ClInclude>
+    <ClInclude Include="baseplayer.h">
+      <Filter>Header Files\hooks\baseplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="esp.h">
+      <Filter>Header Files\features</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

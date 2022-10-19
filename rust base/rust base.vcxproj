@@ -143,6 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="esp.cpp" />
     <ClCompile Include="game\classes.cpp" />
     <ClCompile Include="game\il2cpp.cpp" />
     <ClCompile Include="game\offsets.cpp" />
@@ -151,12 +152,16 @@
     <ClCompile Include="utils\memory.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="baseplayer.h" />
+    <ClInclude Include="esp.h" />
     <ClInclude Include="game\classes.hpp" />
     <ClInclude Include="game\hooks.hpp" />
     <ClInclude Include="game\il2cpp.hpp" />
     <ClInclude Include="game\offsets.hpp" />
     <ClInclude Include="gui_framework.h" />
+    <ClInclude Include="hinclude.h" />
     <ClInclude Include="includes.hpp" />
+    <ClInclude Include="ongui.h" />
     <ClInclude Include="utils\lazy_importer.hpp" />
     <ClInclude Include="utils\math.hpp" />
     <ClInclude Include="utils\memory.hpp" />
