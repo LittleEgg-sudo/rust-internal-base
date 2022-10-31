@@ -1,0 +1,23 @@
+﻿  aimbot.cpp
+C:\Users\Andrew\Desktop\rust-base-main\rust base\game\il2cpp.hpp(36,11): warning C4200: nonstandard extension used: zero-sized array in struct/union
+C:\Users\Andrew\Desktop\rust-base-main\rust base\game\il2cpp.hpp(36,11): message : This member will be ignored by a defaulted constructor or copy/move assignment operator
+C:\Users\Andrew\Desktop\rust-base-main\rust base\game\classes.hpp(846,3): warning C4091: 'inline ': ignored on left of 'rust::box_bounds' when no variable is declared
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(10,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(11,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(12,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(12,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(13,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(13,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(29,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(30,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(31,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(31,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(32,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Andrew\Desktop\rust-base-main\rust base\aimbot.cpp(32,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+  Generating code
+  355 of 1512 functions (23.5%) were compiled, the rest were copied from previous compilation.
+    18 functions were new in current compilation
+    17 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  rust base.vcxproj -> C:\Users\Andrew\Desktop\rust-base-main\x64\Release\rust base.dll
